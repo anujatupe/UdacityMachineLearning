@@ -1,4 +1,5 @@
 import numpy as np
+import pandas
 
 '''
 The following code is to help you play with Numpy, which is a library 
@@ -87,3 +88,10 @@ if True:
     print ""
     print np.dot(array_1, array_2)
 
+
+''' My implementation of standard deviation in numpy
+'''
+
+example_series = pandas.Series([5,6,7,1,0,2,3,4])
+std_deviation = numpy.sqrt(numpy.sum(numpy.square(example_series - numpy.mean(example_series)))/example_series.size)
+print "Standard deviation of the series is {}".format(std_deviation)
